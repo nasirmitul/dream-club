@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Information.css'
 import nasir from '../../images/nasir.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Time from '../Time/Time';
 
 const Information = (props) => {
 
@@ -11,11 +12,29 @@ const Information = (props) => {
     let totalTime = 0;
     for (const singleTime of exerciseTime) {
         totalTime = totalTime + singleTime.time;
-
     }
 
     const showToast = () => toast.success("Activity Completed. Congratulations.");
 
+    const [times, setTimes] = useState([])
+    useEffect(() => {
+        fetch('time.json')
+            .then(res => res.json())
+            .then(data => setTimes(data))
+    }, []);
+
+
+    const [breakTime, setBreakTime] = useState([])
+
+    const handleTime = (time) => {
+        const showBreakTime = [...breakTime, time]
+        setBreakTime(showBreakTime);
+    }
+
+    let time = 0;
+    for (const showTime of breakTime) {
+        time = showTime.time;
+    }
 
     return (
         <div className='information'>
@@ -46,11 +65,13 @@ const Information = (props) => {
             <div className="add-break">
                 <p className='sec-title'>Add A Break</p>
                 <div className="times">
-                    <p>10s</p>
-                    <p>20s</p>
-                    <p>30s</p>
-                    <p>40s</p>
-                    <p>50s</p>
+                    {
+                        times.map(time => <Time
+                            key={time.id}
+                            time={time}
+                            handleTime={handleTime}
+                        ></Time>)
+                    }
                 </div>
             </div>
 
@@ -64,7 +85,7 @@ const Information = (props) => {
 
                 <div className="break-info">
                     <p className='info-title'>Exercise time</p>
-                    <p className='info-time'>{0} seconds</p>
+                    <p className='info-time'>{time} seconds</p>
                 </div>
             </div>
 

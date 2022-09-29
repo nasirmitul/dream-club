@@ -1,9 +1,10 @@
 .information {
     width: 100%;
     background: #fff;
-    height: 100vh;
+    height:fit-content;
     padding: 20px;
     border-radius: 8px;
+    min-width: 350px;
 }
 
 .main-info {
@@ -88,24 +89,7 @@
     margin-bottom: 30px;
 }
 
-.times p {
-    background: #fff;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: .4s;
-    cursor: pointer;
-    font-size: .9rem;
-    font-weight: 500;
-}
 
-.times p:hover {
-    background: #9452ff;
-    color: #fff;
-}
 
 .time-info,
 .break-info{

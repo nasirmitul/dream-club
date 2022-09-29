@@ -1,0 +1,15 @@
+.times button {
+    background: #fff;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: .4s;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.times button:hover {
+    background: #9452ff;
+    color: #fff;
+}
