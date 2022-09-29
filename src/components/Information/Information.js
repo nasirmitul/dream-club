@@ -1,8 +1,15 @@
 import React from 'react';
 import './Information.css'
 import nasir from '../../images/nasir.jpg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Information = () => {
+
+
+    const notify = () => toast("Activity Completed. Congratulations.");
+
+
     return (
         <div className='information'>
             <div className="personal-info">
@@ -54,8 +61,8 @@ const Information = () => {
                 </div>
             </div>
 
-
-            <button className="activity-btn">Activity Completed</button>
+            <button onClick={notify} className="activity-btn">Activity Completed</button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
