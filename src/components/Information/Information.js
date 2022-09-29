@@ -85,7 +85,7 @@ const Information = (props) => {
                 </div>
 
                 <div className="break-info">
-                    <p className='info-title'>Exercise time</p>
+                    <p className='info-title'>Break time</p>
                     <p className='info-time'>{localStorage.getItem('time')} seconds</p>
                 </div>
             </div>
