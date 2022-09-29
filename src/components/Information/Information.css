@@ -131,3 +131,11 @@
     background: transparent;
     color: #9452ff;
 }
+
+
+
+@media (max-width: 400px) { 
+    .information {
+        min-width: 100%;
+    }
+}

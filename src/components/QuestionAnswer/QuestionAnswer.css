@@ -1,0 +1,27 @@
+.qn-title{
+    margin: 50px 0 30px 0;
+    color: #9452ff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.qn-title::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #9452ff;
+    left: 0;
+    bottom: -5px;
+}
+
+.accordion{
+    margin-bottom: 50px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #9452ff;
+    background-color: rgba(148, 82, 255, 0.185);
+    font-weight: 500;
+}

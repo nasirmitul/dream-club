@@ -4,7 +4,6 @@ import nasir from '../../images/nasir.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Time from '../Time/Time';
-import { addToLocal } from '../../utilities/localstorage';
 
 const Information = (props) => {
 

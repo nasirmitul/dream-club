@@ -4,7 +4,6 @@
     gap: 20px;
 }
 
-
 .activities{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,7 +16,7 @@
     color: #9452FF;
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 1199px) { 
     .activities{
         grid-template-columns: repeat(2, 1fr);
     }    
@@ -27,4 +26,19 @@
     .activities{
         grid-template-columns: 1fr;
     }    
+}
+
+@media (max-width: 770px) { 
+    .activity-container{
+        grid-template-columns: 1fr;
+    }    
+    .activities{
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media (max-width: 770px) { 
+    .activities{
+        grid-template-columns: 1fr;
+    } 
 }
