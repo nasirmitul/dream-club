@@ -16,7 +16,6 @@ const Activities = () => {
     }, []);
 
     const addToList = (activity) =>{
-        // console.log(activity);
         const totalTime = [...exerciseTime, activity];
         setExerciseTime(totalTime);
     }

@@ -4,6 +4,7 @@ import nasir from '../../images/nasir.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Time from '../Time/Time';
+import { addToLocal } from '../../utilities/localstorage';
 
 const Information = (props) => {
 
@@ -29,6 +30,7 @@ const Information = (props) => {
     const handleTime = (time) => {
         const showBreakTime = [...breakTime, time]
         setBreakTime(showBreakTime);
+        localStorage.setItem('time', time.time);
     }
 
     let time = 0;
@@ -85,7 +87,7 @@ const Information = (props) => {
 
                 <div className="break-info">
                     <p className='info-title'>Exercise time</p>
-                    <p className='info-time'>{time} seconds</p>
+                    <p className='info-time'>{localStorage.getItem('time')} seconds</p>
                 </div>
             </div>
 
