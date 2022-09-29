@@ -9,8 +9,8 @@ const Activity = (props) => {
             <img src={picture} alt="" />
             <h3 className='name'>{name}</h3>
             <p className='about'>{about}</p>
-            <p className='age'>For age: {age}</p>
-            <p className='time'>Time required: {time}s</p>
+            <p className='age'>For age: <span>{age}</span></p>
+            <p className='time'>Time required: <span>{time}s</span></p>
             <button className='add-btn'>Add to list</button>
         </div>
     );

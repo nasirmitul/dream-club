@@ -3,6 +3,24 @@
     background: #fff;
     padding: 20px;
     border-radius: 8px;
+    position: relative;
+}
+
+.activity::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(148, 82, 255, 0.9);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    border-radius: 9px;
+    transition: .4s;
+}
+
+.activity:hover::before{
+    transform: rotate(-3deg);
 }
 
 .activity img{
@@ -15,19 +33,32 @@
 .activity .name{
     font-size: 1.3rem;
     font-weight: 600;
-    margin-top: 10px;
+    margin: 15px 0 10px;
     color: #202020;
 }
 
 .activity .about{
     font-size: .9rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 8px;
+    line-height: 18px;
+
 }
 
 .activity .age,
 .activity .time{
-    margin-top: -10px;
+    margin: 8px 0;
+    font-weight: 400;
+}
+
+.activity .age span,
+.activity .time span{
+    margin: 8px 0;
     font-weight: 500;
+}
+
+.activity .time{
+    margin-bottom: 20px;
 }
 
 .activity .add-btn{

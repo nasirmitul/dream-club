@@ -1,0 +1,149 @@
+.information {
+    width: 100%;
+    background: #fff;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.main-info .name {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+}
+
+.main-info .address {
+    margin: 0;
+    font-size: .9rem;
+    color: rgb(75, 75, 75);
+}
+
+.other-info,
+.times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(242, 243, 252);
+    padding: 20px 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.other-info .weight,
+.other-info .height,
+.other-info .age {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.other-info .weight h4,
+.other-info .height h4,
+.other-info .age h4 {
+    font-size: 1.3rem;
+}
+
+.other-info .weight h4 span,
+.other-info .height h4 span,
+.other-info .age h4 span {
+    font-size: .7rem;
+    color: rgb(116, 116, 116);
+}
+
+.other-info .weight p,
+.other-info .height p,
+.other-info .age p {
+    font-size: 1rem;
+    color: rgb(65, 65, 65);
+    font-weight: 500;
+}
+
+
+.add-break {
+    margin-top: 30px;
+    gap: 6px;
+}
+
+.sec-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.times {
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.times p {
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .4s;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.times p:hover {
+    background: #9452ff;
+    color: #fff;
+}
+
+.time-info,
+.break-info{
+    padding: 20px 10px;
+    background: rgb(242, 243, 252);
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.info-title{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.info-time{
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgb(90, 90, 90);
+}
+
+.activity-btn{
+    margin-top: 50px;
+    width: 100%;
+    background: #9452ff;
+    border: 2px solid #9452ff;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.activity-btn:hover{
+    background: transparent;
+    color: #9452ff;
+}
