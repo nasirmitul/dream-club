@@ -1,0 +1,47 @@
+.activity{
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.activity img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.activity .name{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #202020;
+}
+
+.activity .about{
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.activity .age,
+.activity .time{
+    margin-top: -10px;
+    font-weight: 500;
+}
+
+.activity .add-btn{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    background: #9452ff;
+    border: 2px solid #9452ff;
+    color: #fff;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+.activity .add-btn:hover{
+    background: transparent;
+    color: #9452ff;
+}

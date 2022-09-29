@@ -1,4 +1,12 @@
-.App {
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: rgb(242, 243, 252);
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
