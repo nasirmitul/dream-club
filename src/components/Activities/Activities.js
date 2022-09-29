@@ -6,11 +6,20 @@ import './Activities.css'
 const Activities = () => {
 
     const [activities, setActivities] = useState([]);
+    const [exerciseTime, setExerciseTime] = useState([]);
+
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setActivities(data))
     }, []);
+
+    const addToList = (activity) =>{
+        // console.log(activity);
+        const totalTime = [...exerciseTime, activity];
+        setExerciseTime(totalTime);
+    }
 
     return (
         <div className='activity-container'>
@@ -21,13 +30,14 @@ const Activities = () => {
                         activities.map(activity => <Activity
                             key={activity.id}
                             activity={activity}
+                            addToList = {addToList}
                         ></Activity>)
                     }
                 </div>
             </div>
 
             <div className="info">
-                <Information></Information>
+                <Information exerciseTime ={exerciseTime}></Information>
             </div>
         </div>
     );

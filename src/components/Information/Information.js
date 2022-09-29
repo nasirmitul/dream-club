@@ -4,10 +4,17 @@ import nasir from '../../images/nasir.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Information = () => {
+const Information = (props) => {
 
+    const { exerciseTime } = props;
 
-    const notify = () => toast("Activity Completed. Congratulations.");
+    let totalTime = 0;
+    for (const singleTime of exerciseTime) {
+        totalTime = totalTime + singleTime.time;
+
+    }
+
+    const showToast = () => toast.success("Activity Completed. Congratulations.");
 
 
     return (
@@ -52,17 +59,27 @@ const Information = () => {
 
                 <div className="time-info">
                     <p className='info-title'>Exercise time</p>
-                    <p className='info-time'>seconds</p>
+                    <p className='info-time'>{totalTime} seconds</p>
                 </div>
 
                 <div className="break-info">
                     <p className='info-title'>Exercise time</p>
-                    <p className='info-time'>seconds</p>
+                    <p className='info-time'>{0} seconds</p>
                 </div>
             </div>
 
-            <button onClick={notify} className="activity-btn">Activity Completed</button>
-            <ToastContainer></ToastContainer>
+            <button onClick={showToast} className="activity-btn">Activity Completed</button>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };
